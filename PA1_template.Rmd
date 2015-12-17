@@ -1,25 +1,27 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
+title: "Reproducible Research Project 1"
+author: "Maurizio Murino"
+date: "17 December 2015"
+output: html_document
 ---
 
+## 1. Loading and preprocessing the data
 
-## Loading and preprocessing the data
+Unzip and read the data  from the GitHub repository. Dimensional exploration.
 
+```{r}
+activity <- read.csv(unz("activity.zip", "activity.csv"))
+View(activity)
+dim(activity)
+```
+## 2. Mean total number of steps taken per day
 
+The data from this csv will be transformed, a mean and median calculated and a histogram displayed.
 
-## What is mean total number of steps taken per day?
+You can also embed plots, for example:
 
+```{r, echo=FALSE}
+plot(cars)
+```
 
-
-## What is the average daily activity pattern?
-
-
-
-## Imputing missing values
-
-
-
-## Are there differences in activity patterns between weekdays and weekends?
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

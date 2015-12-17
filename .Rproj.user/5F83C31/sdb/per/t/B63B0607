@@ -1,0 +1,18 @@
+{
+    "contents" : "---\ntitle: \"Reproducible Research Project 1\"\nauthor: \"Maurizio Murino\"\ndate: \"17 December 2015\"\noutput: html_document\n---\n\n## 1. Loading and preprocessing the data\n\nUnzip and read the data  from the GitHub repository. Dimensional exploration.\n\n```{r}\nactivity <- read.csv(unz(\"activity.zip\", \"activity.csv\"))\nView(activity)\ndim(activity)\n```\n## 2. Mean total number of steps taken per day\n\nThe data from this csv will be transformed, a mean and median calculated and a histogram displayed.\n\nYou can also embed plots, for example:\n\n```{r, echo=FALSE}\nplot(cars)\n```\n\nNote that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.\n",
+    "created" : 1450344787972.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3225401849",
+    "id" : "B63B0607",
+    "lastKnownWriteTime" : 1450347023,
+    "path" : "C:/Users/MaurizioLocale/OneDrive/Data_Science/5 Reproducible Research/RepData_PeerAssessment1/PA1_template.Rmd",
+    "project_path" : "PA1_template.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
