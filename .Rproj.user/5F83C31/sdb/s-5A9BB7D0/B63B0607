@@ -1,0 +1,18 @@
+{
+    "contents" : "---\ntitle: \"Reproducible Research Project 1\"\nauthor: \"Maurizio Murino\"\ndate: \"17 December 2015\"\noutput: html_document\n---\n```{r setoption, echo = TRUE}\necho = TRUE  # The code is displayed\n```\n\n\n## 1. Loading and preprocessing the data\n\n### 1.1. Unzip and read the data  from the GitHub repository. Dimensional exploration.\n\n```{r}\nactivity <- read.csv(unz(\"activity.zip\", \"activity.csv\"))\nsapply(activity, class)\n```\n\n### 1.2. Process/transform the data (if necessary) into a format suitable for your analysis.\n\nactivity$date is converted from factor to date class. I used the \"zoo\" package to manage the time serie which, furthermore, is regularly spaced.\n\n``` {r}\n\nactivity$date <- as.Date(activity$date, format = \"%Y-%m-%d\")\nsuppressWarnings(library(zoo))\nis.regular(activity$date)\n```\n\n\n## 2. What is mean total number of steps taken per day?\n\n### 2.1 Calculate the total number of steps taken per day\n\nThe result is calculated and stored in the object \"steps_day\". Missing values are removed. Since the resulting table is quinte large, I set {r, results = \"hide\"}. Approximately the 13% of cases in \"steps\" result in missing data.\n\n```{r, results = 'hide'}\ncolMeans(is.na(activity))\nsteps_day <- aggregate(steps ~ date, rm.na = TRUE, data = activity, FUN = sum)\n```\n\n### 2.2. Make a histogram of the total number of steps taken each day\n\n```{r}\n\nhist(steps_day$steps)\n\n```\n\n### 2.3. Calculate and report the mean and median of the total number of steps taken per day.\n\nSince those calculations return two large tables the results are not shown.\n\n\n```{r, results=\"hide\"}\naggregate(steps ~ date, data = activity, FUN = mean)\naggregate(steps ~ date, data = activity, FUN = median)\n```\n\n",
+    "created" : 1450344787972.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "143587163",
+    "id" : "B63B0607",
+    "lastKnownWriteTime" : 1450461933,
+    "path" : "C:/Users/MaurizioLocale/OneDrive/Data_Science/5 Reproducible Research/RepData_PeerAssessment1/PA1_template.Rmd",
+    "project_path" : "PA1_template.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
