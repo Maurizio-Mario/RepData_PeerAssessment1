@@ -10,14 +10,14 @@
     "path" : null,
     "project_path" : null,
     "properties" : {
-        "cacheKey" : "qg4fyw5uwn",
+        "cacheKey" : "h2qu24nkm0",
         "caption" : "activity",
-        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=activity&cache_key=qg4fyw5uwn",
-        "displayedObservations" : 17568,
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=activity&cache_key=h2qu24nkm0",
+        "displayedObservations" : "17568",
         "environment" : "",
         "object" : "activity",
-        "totalObservations" : 17568,
-        "variables" : 3
+        "totalObservations" : "17568",
+        "variables" : "3"
     },
     "relative_order" : 2,
     "source_on_save" : false,
